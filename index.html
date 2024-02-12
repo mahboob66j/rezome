@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/f052a67652.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>rezomeh</title>
+  </head>
+  <body>
+    <!---header-->
+    <header class="header">
+      <a href="#" class="logo">Portfolio</a>
+
+      <nav class="navbar">
+        <a href="#home" class="active">home</a>
+        <a href="#about">about</a>
+        <a href="#services">services</a>
+        <a href="#portfolio">portfolio</a>
+        <a href="#contact">contact</a>
+      </nav>
+      <a href="#"><i class="fas fa-bars menu-icon"></i></a>
+    </header>
+    <!---home-->
+    <section class="home" id="home">
+      <div class="home-content">
+        <h3>Hello, I am</h3>
+        <h1>Mahboobeh Jafari</h1>
+        <h2>Front-End Developer</h2>
+
+        <div class="social-media">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+
+        <a href="#" class="btn">Download CV</a>
+      </div>
+
+      <div class="home-img">
+        <img src="assets/3.jpg" />
+      </div>
+    </section>
+    <!---about-->
+    <section class="about" id="about">
+      <div class="about-img">
+        <img src="assets/7.jpg" alt="" />
+      </div>
+
+      <div class="about-content">
+        <h2 class="heading">About Me</h2>
+        <p>
+          i'm mahboobeh jafari,front end developer. i like to living ,learning
+          and leveling up one day at a time.
+        </p>
+        <h3>Birth day: <span> 28 june 1987 </span></h3>
+        <h3>phone: <span> 09139062693 </span></h3>
+
+        <h3>city: <span> isfahan, iran </span></h3>
+        <h3>email: <span> mahboobehjafari66@email.com </span></h3>
+
+        <a href="#" class="btn">Read More</a>
+      </div>
+    </section>
+    <!---services-->
+    <section class="services" id="services">
+      <h2 class="heading">My <span>Services</span></h2>
+
+      <div class="services-container">
+        <div class="services-box">
+          <i class="fas fa-code"></i>
+          <h3>Web Development</h3>
+
+          <a href="#" class="btn">Read More</a>
+        </div>
+        <div class="services-box">
+          <i class="fa-brands fa-windows"></i>
+          <h3>Front End</h3>
+
+          <a href="#" class="btn">Read More</a>
+        </div>
+        <div class="services-box">
+          <i class="fas fa-desktop"></i>
+          <h3>Web Design</h3>
+
+          <a href="#" class="btn">Read More</a>
+        </div>
+      </div>
+    </section>
+
+    <!---portfolio-->
+    <section class="portfolio" id="portfolio">
+      <h1>portfolio</h1>
+      <div class="button-con" id="menu-categories"></div>
+      <div class="Project-list" id="Project-list"></div>
+    </section>
+
+    <!---contact-->
+    <section class="contact" id="contact">
+      <div class="center-text">
+        <h2>contact <span>me</span></h2>
+      </div>
+      <div class="contact-form">
+        <form action="">
+          <input type="text" placeholder="your name" required />
+          <input type="email" placeholder="email address..." required />
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="write massage here..."
+            required
+          ></textarea>
+          <input type="submit" name="" value="send massage" class="send-btn" />
+        </form>
+      </div>
+    </section>
+    <!---footer-->
+    <footer class="footer">
+      <div class="footer-text">
+        <p>Copyright &copy; 2023 by Portfolio | All Rights Reserved</p>
+      </div>
+      <div class="footer-iconTop">
+        <a href="#home"><i class="fa-solid fa-arrow-up"></i></a>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
