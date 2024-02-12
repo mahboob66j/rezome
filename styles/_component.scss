@@ -1,0 +1,523 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 7%;
+  background: $text-color;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+  transition: 0.5s;
+  .menu-icon{
+    font-size: 2.6rem;
+    color: $with-color;
+    display: none;
+    cursor: pointer;
+
+    @media screen and (max-width : 800px) {
+      display: block;
+    }
+  }
+
+  .logo {
+    font-size: 2.5rem;
+    color: $main-color;
+    font-weight: 600;
+    cursor: default;
+    margin-right: auto;
+  }
+  .navbar {
+   
+    @media screen and (max-width : 800px) {
+      position: absolute;
+     top: 100%;
+     left: 0;
+     width: 100%;
+     padding: 1rem 3%;
+     background-color: $background-color;
+
+     border-top: 0.1rem solid rgba(0 , 0 ,0 ,0.2);
+     box-shadow: 0.5rem 1rem rgba(0 , 0 , 0 , 0.1);
+     display: none;
+     &.active{
+      display: block;
+    }
+
+    }
+   
+
+    
+    & a {
+      position: relative;
+      font-size: 1.7rem;
+      color: $with-color;
+      font-weight: 500;
+      margin-right: 3.5rem;
+      
+      @media screen and (max-width : 800px) {
+        display: block;
+       color: $text-color;
+       font-size: 2rem;
+       margin: 3rem 0;
+      
+
+       &:active{
+        color: $main-color;
+       }
+
+       &::before{display: none;}
+      }
+    }
+
+    .header.sticky {
+      color: $text-color;
+    }
+  }
+}
+a.active::before {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 0.2rem;
+  background-color: $with-color;
+}
+
+.header.sticky {
+  background-color: $background-color;
+  -webkit-box-shadow: 10px 12px 24px -12px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 12px 24px -12px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 12px 24px -12px rgba(0, 0, 0, 0.75);
+}
+.header.sticky .navbar a {
+  color: $text-color;
+}
+.header.sticky .navbar a.active {
+  color: $main-color;
+}
+.header.sticky .navbar a::before {
+  background-color: $main-color;
+  opacity: 0.7;
+}
+.header.sticky i {
+  color: $text-color;
+  opacity: 0.9;
+}
+
+
+.home {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  padding: 10rem 7% 2rem 7%;
+  background-color: $with-color;
+  @media screen and (max-width: 1000px) {
+    padding: 10rem 3% 2rem 3%;
+  }
+  @media screen and (max-width: 800px) {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  @media screen and (max-width : 650px) {
+    padding: 15rem 7% 2rem 7%;
+    font-size: 30%;
+  }
+  @media screen and (max-width : 580px) {
+    padding: 10rem 1% 2rem 1%;
+    font-size: 30%;
+  }
+
+  .home-content {
+    width: 50%;
+
+    @media screen and (max-width : 800px) {
+      margin-left: 8%;
+      margin-bottom: 10%;
+    }
+  
+
+    h1 {
+      font-size: 5.6rem;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+      @media screen and (max-width : 580px) {
+        font-size: 4rem
+      }
+      
+    }
+
+    .social-media {
+      a {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 4rem;
+        height: 4rem;
+        background-color: transparent;
+        border: 0.2rem solid $main-color;
+        border-radius: 50%;
+        box-shadow: 0 0.2rem $shadow-color;
+        font-size: 2rem;
+        color: $main-color;
+        margin: 2.5rem 1.5rem 3rem 0;
+        transition: 0.5s ease;
+        @media screen and (max-width : 580px) {
+          width: 3rem;
+          height: 3rem;
+      }
+      a:hover {
+        background-color: $main-color;
+        color: $with-color;
+      }
+    }
+  }
+}
+
+  .home-img {
+    max-width: 50%;
+    padding-left: 12%;
+
+    @media screen and (max-width: 1000px) {
+      padding-left: 0;
+    }
+    @media screen and (max-width: 700px) {
+      display: none;
+     }
+
+    img {
+      width: 350px;
+      height: 450px;
+      object-fit: cover;
+      pointer-events: none;
+      border-radius: 50%;
+      border: 2px solid $main-color;
+      display: inline-flex;
+      
+    }
+  }
+}
+
+.about {
+  padding: 1rem 7% 1rem 7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+  @media screen and (max-width: 1000px) {
+    padding: 10rem 3% 2rem 3%;
+  }
+  @media screen and (max-width: 800px) {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  @media screen and (max-width: 700px) {
+    padding: 1% 16rem;
+   }
+   @media screen and (max-width : 650px) {
+    max-width: 600px;
+    padding: 3% 5rem;
+  }
+
+  .about-img {
+ 
+    img {
+      width: 350px;
+      height: 450px;
+      object-fit: cover;
+      pointer-events: none;
+      border-radius: 50%;
+      border: 2px solid $main-color;
+      display: inline-flex;
+
+  
+
+      @media screen and (max-width: 800px) {
+        width: 60vw;
+      }
+      
+      @media screen and (max-width: 700px) {
+        width: 250px;
+        height: 350px;
+       }
+    }
+  }
+  .about-content {
+    @media screen and (max-width: 800px) {
+      margin: 10% 10%;
+    }
+
+    .heading {
+      font-size: 4.5rem;
+    }
+    h3 {
+      text-align: left;
+      line-height: 1.2;
+      font-size: 1.8rem;
+    }
+    span {
+      color: $text-color;
+      font-weight: 400;
+      font-size: 16px;
+      text-transform: capitalize;
+    }
+
+    p {
+      text-transform: capitalize;
+      line-height: 1.8;
+    }
+    a {
+      margin-top: 5%;
+    }
+  }
+}
+
+.services {
+  min-height: 100vh;
+  padding: 7rem 12% 2rem 15%;
+  // padding-left: 12%;
+  // padding-right: 15%;
+
+  h2 {
+    font-size: 4.6rem;
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+  .services-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    .services-box {
+      flex: 1 1 30rem;
+      background-color: $background-color;
+      padding: 2rem 1rem 3rem;
+      border-radius: 2rem;
+      box-shadow: 0.1rem 0.5rem $shadow-color;
+      text-align: center;
+      border-top: 0.6rem solid $main-color;
+      border-bottom: 0.6rem solid $main-color;
+      transition: 0.5s ease;
+
+      &:hover {
+        box-shadow: 0 0.1rem 2rem $shadow-color;
+        transform: scale(1.02);
+      }
+
+      i {
+        font-size: 5rem;
+        color: $main-color;
+        padding-bottom: 2.5rem;
+      }
+      h3 {
+        font-size: 2.6rem;
+        padding-bottom: 5rem;
+        transition: 0.5s ease;
+
+        &:hover {
+          color: $main-color;
+        }
+      }
+      p {
+        font-size: 1.6rem;
+        margin: 1rem 0 3rem;
+      }
+    }
+  }
+}
+
+.portfolio {
+  width: 100%;
+  padding: 8rem 0;
+  height: auto;
+  h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 46px;
+    text-transform: capitalize;
+  }
+
+  .button-con {
+    width: 100%;
+    padding: $spacing * 8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $spacing * 2;
+  
+  }
+  }
+  .Project-list {
+    width: 100%;
+    padding: 0 $spacing * 25;
+    margin: $spacing * 4 0;
+    display: flex;
+    flex-direction: row;
+
+    @media screen and (max-width: 1200px) {
+      flex-direction: column;
+    }
+
+    .project-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 0 2%;
+
+      img {
+        width: 340px;
+        height: 300px;
+        object-fit: cover;
+        border: 1px solid transparent;
+        border-radius: $radius;
+        box-shadow: 0 0 5px $main-color;
+      }
+
+      h3 {
+        text-transform: capitalize;
+        padding-top: $spacing * 8;
+        font-size: 22px;
+        padding-bottom: $spacing * 15;
+        padding-top: $spacing * 15;
+        font-weight: 600;
+      }
+    }
+  }
+
+
+.but {
+  padding: $spacing * 3 $spacing * 14;
+  text-transform: capitalize;
+  border-radius: $radius;
+  border-color: $main-color;
+  background-color: transparent;
+  font-size: 1.8rem;
+  color: $main-color;
+  transition: 0.4s;
+  cursor: pointer;
+  @media screen and (max-width : 450px) {
+    padding: $spacing * 1 $spacing * 7;   
+  }
+
+  &:hover {
+    background-color: $main-color;
+    color: $with-color;
+  }
+}
+
+.contact {
+  h2 {
+    font-size: 4rem;
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+  }
+  .contact-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4.2rem;
+    @media screen and (max-width : 650px) {
+      padding: 1rem 5%;
+    }
+
+    form {
+      position: relative;
+      width: 600px;
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 20px;
+        border: none;
+        outline: none;
+        box-shadow: 0 0 5px $main-color;
+        color: $text-color;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        font-size: 15px;
+      }
+      .send-btn {
+        display: inline-block;
+        padding: 11px 26px;
+        background-color: $main-color;
+        color: $background-color;
+        border: 2px solid $main-color;
+        border-radius: 8px;
+        font-size: 15px;
+        font-weight: 600;
+        transition: all 0.5s ease;
+        width: 30%;
+        @media screen and (max-width : 650px) {
+          font-size: 10px;
+          padding: 11px 16px;
+        }
+        &:hover {
+          background-color: transparent;
+          color: $main-color;
+          box-shadow: 0 0 20px $main-color;
+          cursor: pointer;
+        
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 7%;
+  background-color: $main-color;
+  @media screen and (max-width : 650px) {
+    padding: 1rem 10%;
+  }
+  .footer-text {
+    p {
+      font-size: 1.6rem;
+      color: $with-color;
+      @media screen and (max-width : 650px) {
+        font-size: 1.1rem;
+      }
+    }
+  }
+  .footer-iconTop {
+    a {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.8rem;
+      background-color: $with-color;
+      border: 0.8rem;
+      border: 0.2rem solid $main-color;
+      outline: 0.2rem solid transparent;
+      transition: 0.5s ease;
+
+      &:hover {
+        outline-color: $with-color;
+      }
+
+      & i {
+        font-size: 2.4rem;
+        color: $text-color;
+        @media screen and (max-width : 650px) {
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+}
+.active-but {
+  background-color: $main-color;
+  color: $with-color;
+}
